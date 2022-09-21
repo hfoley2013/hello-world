@@ -5,60 +5,106 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div id="greeting">
+      <script>
+        // Asks for users name
+        let userName = prompt('Hello! What is your name?');
+        //If user does not enter a name, code executes without allocated space for name
+        if(userName.length < 1) {
+          let greeting = "Hello! Welcome to my website!"  
+          document.write(greeting)
+        }
+        // If user enters a name, code will display greeting with their name
+        else {
+          let greeting = "Hello " + userName + "! Welcome to my website!"
+          document.write(greeting)
+        }
+      </script>
+    </div>
+
+    <script type="text/javascript">
+      // Asks user to confirm that they want to leave to an external site
+      function confirmExit(name){
+        if(name == "external"){
+          if(!confirm("Go to external site?")){
+            return false;
+          }
+        }
+      }
+    </script>
+
+    <script>
+      // Detects when the user closes or refreshes the tab and asks them to confirm
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = "Hey! Don't leave yet, unless you're going skydiving!";
+        });
+    </script>
+    
     <header>
       <h1>My Favorite Hobby</h1>
       <nav>
         <ul>
+          <li><p>Links to Others' Hobbies:</p></li>
           <li>
-            <a href="https://deiosha.github.io/hello-world/">Deiosha</a>
+            <a href="https://deiosha.github.io/hello-world/" name="external" onclick="return confirmExit(this.name)">Deiosha</a>
           </li>
           <li>
-            <a href="https://dchoi294.github.io/hello-world/"menu.html>Don</a>
+            <a href="https://dchoi294.github.io/hello-world/" name="external" onclick="return confirmExit(this.name)">Don</a>
           </li>
        </ul>
      </nav>
    </header>
 
-    <section>
-      <h2>Skydving</h2>
+    <main>
+      <section id="top-section">
+        <h2>Skydiving</h2>
+        
+        <div class="images">
+          <img src="https://github.com/hfoley2013/hello-world/blob/main/102/door-lookingin.jpg?raw=true" alt="In the Door" />
+          
+          <img src="https://github.com/hfoley2013/hello-world/blob/main/102/exit-headdown.jpg?raw=true" alt="Skydive Head Down Exit" />
+          
+          <img src="https://github.com/hfoley2013/hello-world/blob/main/102/air-backfly.JPG?raw=true" alt="Back Fly" />
+        </div>    
+        
+        <p>My favorite hobby is skydiving. I love being up in the air and having the sensation of flying my body. </p>
+      </section>
 
-      <img src="https://github.com/hfoley2013/hello-world/blob/main/102/door-lookingin.jpg?raw=true" alt="In the Door" />
-
-      <img src="https://github.com/hfoley2013/hello-world/blob/main/102/exit-headdown.jpg?raw=true" alt="Skydive Head Down Exit" />
-
-      <img src="https://github.com/hfoley2013/hello-world/blob/main/102/air-backfly.JPG?raw=true" alt="Back Fly" />
-
-      <p>My favorite hobby is skydiving. I love being up in the air and having the sensation of flying my body. </p>
-    </section>
-
-    <section>
-      <p>I started jumping out of planes as part of my job in the Navy. As an <a href="https://www.navy.com/careers/explosive-ordnance-disposal-technician">Explosive Ordnance Disposal Technician</a>, my job required that I be able to get to any ordnance problem, no matter the location. That included both ordnance on land, on or in the water, and in remote locations. Sometimes, the fastest way to get to a bomb is to fly into the area and parachute into a safe area nearby. </p>
-      <p>When I first started jumping, I absolutely hate it! Every morning heading to the dropzone I had a sick feeling in my stomach and just felt like throwing up. I was in pure survival mode just trying to make it through training. There is no "on-ramping" for our training. After a few hours on the ground learning how to pack our own parachutes and reviewing emergency procedures, we strap on our 'chutes and are chucked out of a plane by our instructor.</p>
-      <p>Though I struggled in those early jumps, after about 20 jumps I began to look around while in the air and time began to slow down. I finally entered into that flow state and realized that I was truly flying; at least as close as true flight humans can achieve without assistance!</p>
-      <p>I went on keep jumping all over the world, but my favorite moments have been sharing the experience of skydiving with my father, my mother-in-law, and my sister-in-law.</p>
-      <p>I took my dad to skydive for his 60th birthday when I just so happened to be passing through home on my way to another military training.</p>
-      <p>When my first son was born, I somehow convinced my mother-in-law, Lili, to come with me and celebrate by jumping out of a plane!</p>
-      <p>Lastly, on our last annual vacation to Hawaii before COVID-19 shut down the world, I helped my sister-in-law, Dianne, cross skydiving off her bucket list and flew next to her while she did a tandem jump.</p>
-      <p>If you have ever thought about skydiving here are a few thoughts:</p>
+      <section id="lower-section">
+        <p>I started jumping out of planes as part of my job in the Navy. As an <a href="https://www.navy.com/careers/explosive-ordnance-disposal-technician" name="external" onclick="return confirmExit(this.name)">Explosive Ordnance Disposal Technician</a>, my job required that I be able to get to any ordnance problem, no matter the location. That included both ordnance on land, on or in the water, and in remote locations. Sometimes, the fastest way to get to a bomb is to fly into the area and parachute into a safe area nearby. </p>
+        <p>When I first started jumping, I absolutely hate it! Every morning heading to the dropzone I had a sick feeling in my stomach and just felt like throwing up. I was in pure survival mode just trying to make it through training. There is no "on-ramping" for our training. After a few hours on the ground learning how to pack our own parachutes and reviewing emergency procedures, we strap on our 'chutes and are chucked out of a plane by our instructor.</p>
+        <p>Though I struggled in those early jumps, after about 20 jumps I began to look around while in the air and time began to slow down. I finally entered into that flow state and realized that I was truly flying; at least as close as true flight humans can achieve without assistance!</p>
+        <p>I went on keep jumping all over the world, but my favorite moments have been sharing the experience of skydiving with my father, my mother-in-law, and my sister-in-law.</p>
+        <p>I took my dad to skydive for his 60th birthday when I just so happened to be passing through home on my way to another military training.</p>
+        <p>When my first son was born, I somehow convinced my mother-in-law, Lili, to come with me and celebrate by jumping out of a plane!</p>
+        <p>Lastly, on our last annual vacation to Hawaii before COVID-19 shut down the world, I helped my sister-in-law, Dianne, cross skydiving off her bucket list and flew next to her while she did a tandem jump.</p>
+      </section>
+    </main>  
+    
+    <aside id="suggestion-box">
+      <p>Thinking about skydiving? <br> Here are a few thoughts:</p>
       <ol>
         <li>It is awesome and you should totally do it!</li>
         <li>If you think you won't like it because you don't like the feel of falling, guess what? You don't feel like your falling! It just feels like you stuck your head outside the car window on the highway</li>
         <li>Take a friend to go jump with you! It's always more fun when you have someone up their with you to share in the experience</li>
         <li>You may think you'll only do it once...but I have to warn you, it's a pretty addicting sensation!</li>
       </ol>
-    </section>
+    </aside>
+
     <footer>
       <nav>
         <ul>
+          <li><p>Other Hobbyists:</p></li>
           <li>
-            <a href="https://deiosha.github.io/hello-world/">Deiosha</a>
+            <a href="https://deiosha.github.io/hello-world/" name="external" onclick="return confirmExit(this.name)">Deiosha</a>
           </li>
           <li>
-            <a href="https://dchoi294.github.io/hello-world/"menu.html>Don</a>
+            <a href="https://dchoi294.github.io/hello-world/" name="external" onclick="return confirmExit(this.name)">Don</a>
           </li>
         </ul>
       </nav>
-      &copy; Code Fellows 102
+      <p>&copy; Code Fellows 102</p>
     </footer>
   </body>
   </html>

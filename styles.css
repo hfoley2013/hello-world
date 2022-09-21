@@ -5,9 +5,126 @@ html, body {
 }
 
 body {
-  color: red;
+  font-family: 'calibri';
+  font-weight: 100;
+  background-color: whitesmoke;
+  margin-left: 20px;
+  padding: 5px 10px 10px 5px;
+  width: 80%;
 }
 
+header {
+  border: 4px double black;
+  width: 63%;
+}
+
+
+
+
 nav ul li {
-  display:  inline-block;
+  display: inline-block;
+  font-size: 25px;
+  color: #1C619E;
+  padding: 5px 10px 10px 5px;
+}
+
+nav li p {
+  font-weight: bold;
+}
+
+nav a {
+  color: #1C619E;
+  text-decoration-line: none;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 50px;
+  color: #1C619E;
+}
+
+
+h2 {
+  font-size: 40px;
+  color: #429beb;
+}
+
+main {
+  /* float: left; */
+  margin: 0 1.5%;
+  width: 63%;
+  display: inline-block;
+}
+
+#suggestion-box {
+  position: fixed;
+  right: 4in;
+  top: 4in;
+  margin: 0 1.5%;
+  width: 30%;
+  border: 4px solid black;
+  background-color: lightgrey;
+  color: black;
+  font-size: 20px;
+  height: 50%;
+  width: 300px;
+  padding: 5px 5px 5px 5px;
+}
+
+#suggestion-box p {
+  text-align: center;
+  font-size: 25px;
+}
+
+#suggestion-box li {
+  font-size: 22px;
+  padding: 5px 5px;
+}
+
+#top-section p {
+  font-weight: bold;
+  font-size: 22px;
+  color: #429beb
+}
+
+img {
+  display: inline-flex;
+  text-align: center;
+  width: auto;
+  height: 220px;
+}
+
+#suggestion-box p {
+  font-weight: bold;
+}
+
+#lower-section p {
+  text-align: left;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#lower-section a {
+  text-decoration: none;
+  color: #429beb;
+}
+
+#greeting {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+footer {
+  position: relative;
+  width: 63%;
+  height: 40px;
+  bottom: 0;
+  display: inline-block;
+  border: 4px double black;
+  vertical-align: text-top;
+}
+
+footer li {
+  vertical-align: middle;
 }
