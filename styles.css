@@ -1,0 +1,13 @@
+/* For use with Lab 04 Website: My Favorite Hobby */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: red;
+}
+
+nav ul li {
+  display:  inline-block;
+}
