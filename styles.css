@@ -58,27 +58,28 @@ main {
 
 #suggestion-box {
   position: fixed;
-  right: 4in;
-  top: 4in;
+  right: 2in;
+  top: 1in;
   margin: 0 1.5%;
   width: 30%;
   border: 4px solid black;
   background-color: lightgrey;
   color: black;
-  font-size: 20px;
-  height: 50%;
+  font-size: 10px;
+  height: 70%;
   width: 300px;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 15px 5px 5px;
 }
 
 #suggestion-box p {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #suggestion-box li {
-  font-size: 22px;
+  font-size: 15px;
   padding: 5px 5px;
+  text-align: left;
 }
 
 #top-section p {
@@ -91,7 +92,7 @@ img {
   display: inline-flex;
   text-align: center;
   width: auto;
-  height: 220px;
+  height: 160px;
 }
 
 #suggestion-box p {
