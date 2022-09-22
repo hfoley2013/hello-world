@@ -1,45 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head> 
-   <title>My Favorite Hobby</title>
+    <title>My Favorite Hobby</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <script src="index.js"></script>
+    
     <div id="greeting">
-      <script>
-        // Asks for users name
-        let userName = prompt('Hello! What is your name?');
-        //If user does not enter a name, code executes without allocated space for name
-        if(userName.length < 1) {
-          let greeting = "Hello! Welcome to my website!"  
-          document.write(greeting)
-        }
-        // If user enters a name, code will display greeting with their name
-        else {
-          let greeting = "Hello " + userName + "! Welcome to my website!"
-          document.write(greeting)
-        }
-      </script>
+      <script>greetUser()</script>
     </div>
 
-    <script type="text/javascript">
-      // Asks user to confirm that they want to leave to an external site
-      function confirmExit(name){
-        if(name == "external"){
-          if(!confirm("Go to external site?")){
-            return false;
-          }
-        }
-      }
-    </script>
-
-    <script>
-      // Detects when the user closes or refreshes the tab and asks them to confirm
-        window.addEventListener('beforeunload', function (e) {
-            e.preventDefault();
-            e.returnValue = "Hey! Don't leave yet, unless you're going skydiving!";
-        });
-    </script>
+    <script>confirmClose()</script>
     
     <header>
       <h1>My Favorite Hobby</h1>
