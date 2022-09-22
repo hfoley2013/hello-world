@@ -31,3 +31,38 @@ window.addEventListener('beforeunload', function (e) {
   e.returnValue = "";
 });
 }
+
+// User Validation Loop
+function guessingGame() {
+  let attemptsAllowed = 3;
+  let correctAnswer = 5;
+  let userGuess = prompt('How many jumps do soldiers jump at Airborne training in Ft. Benning, GA? (Hint: <10)');
+  let correctMessage = "That's right! Trainees conduct 5 jumps at Airborne school. 2 daytime jumps and 1 nighttime jump with no equipment, and 1 daytime and nighttime jump with full combat equipment. Not a lot of jumps, right?";
+  let incorrectMessage = "Trainees conduct 5 jumps at Airborne school. 2 daytime jumps and 1 nighttime jump with no equipment, and 1 daytime and nighttime jump with full combat equipment. Not a lot of jumps, right?";
+
+  while (userGuess != correctAnswer && attemptsAllowed > 1) {
+    attemptsAllowed--;
+    prompt(`Wrong! Guess again. ${attemptsAllowed} remaining.`)
+  }
+  if (userGuess == correctAnswer) {
+    alert(correctMessage);
+  } else {
+    alert(incorrectMessage);
+  }
+}
+
+// Image Loop
+
+function printImages() {
+  let numImages = prompt("How many skydives do you want to make?");
+  let count = 0;
+  
+  while (count < numImages){
+    const aside = document.getElementById("suggestion-box");
+    count++;
+    let image = document.createElement("img");
+    image.setAttribute("src", "102/combat-exit.jpg");
+    image.setAttribute("class", "userImage")
+    aside.appendChild(image)
+    }
+}

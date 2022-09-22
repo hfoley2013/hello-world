@@ -129,3 +129,17 @@ footer {
 footer li {
   vertical-align: middle;
 }
+
+button {
+  background-color: #429beb;
+  color: whitesmoke;
+  border: 1px solid black;
+}
+
+.userImage {
+  border: 1px solid black;
+  height: 40px;
+  width: auto;
+  text-align: center;
+  margin-left: 5px;
+}
