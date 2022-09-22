@@ -118,7 +118,7 @@ img {
 footer {
   position: relative;
   width: 63%;
-  height: 40px;
+  height: auto;
   bottom: 0;
   display: inline-block;
   border: 4px double black;
